@@ -41,8 +41,8 @@ public class Instructor {
 	@Column(name="email")
 	private String email;
 	
-	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="instructor_detail_id")
+	@OneToOne(mappedBy="instructor",cascade=CascadeType.ALL)
+	@JoinColumn(name="instructor_detail_id",nullable=false,referencedColumnName="id")
 	private InstructorDetail instructorDetail;
 
 	public String getFirst_name() {
