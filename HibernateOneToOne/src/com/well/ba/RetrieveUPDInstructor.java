@@ -26,7 +26,7 @@ public class RetrieveUPDInstructor {
 			  
 			 session.beginTransaction();
 			 
-			 Instructor instr = session.get(Instructor.class,22);
+			 Instructor instr = session.get(Instructor.class,3);
 			 
 			 System.out.println("Instructor: ");
 			 System.out.println(instr);

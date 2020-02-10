@@ -8,7 +8,7 @@ public class TestesJDBC {
 
 	public static void main(String[] args) {
 		
-		String jdbcURL 	= "jdbc:oracle:thin:@localhost:1521:orcl";
+		String jdbcURL 	= "jdbc:oracle:thin:@localhost:1521:xe";
 		String user		= "hbstudent";
 		String pwd		= "hbstudent";
 		

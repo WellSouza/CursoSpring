@@ -29,7 +29,8 @@ public class GenerateInstructor {
 			System.out.println("Criando novo Detalhe do Instrutor...");
 			InstructorDetail instDetail = new InstructorDetail("cana.youtube.com","Show");
 			
-			instDetail.setInstructor(inst);
+			//instDetail.setInstructor(inst);
+			inst.setInstructorDetail(instDetail);
 			
 			session.joinTransaction();
 			

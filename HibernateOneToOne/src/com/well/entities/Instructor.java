@@ -1,6 +1,5 @@
 package com.well.entities;
 
-import javax.annotation.Generated;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,15 +11,13 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
-
 @Entity
 @Table(name="Instructor")
 public class Instructor {
 
 	@Id()
-	@GeneratedValue(generator="inst_id",strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="inst_id",sequenceName="seq_instructor_id",allocationSize=1)
+	@GeneratedValue(generator="seq_instructor_id",strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="seq_instructor_id",sequenceName="seq_instructor_id",allocationSize=1)
 	@Column(name="id")
 	private int id;
 	
@@ -41,7 +38,7 @@ public class Instructor {
 	@Column(name="email")
 	private String email;
 	
-	@OneToOne(mappedBy="instructor",cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="instructor_detail_id",nullable=false,referencedColumnName="id")
 	private InstructorDetail instructorDetail;
 
