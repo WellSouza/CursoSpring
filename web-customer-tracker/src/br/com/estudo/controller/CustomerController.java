@@ -7,14 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.estudo.entities.Customer;
-import br.com.etudo.dao.CustomerDAO;
+import br.com.estudo.dao.CustomerDAO;
+import br.com.estudo.entity.Customer;
 
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
 	 
-	@Autowired
+	@Autowired(required=false)
 	private CustomerDAO customerDAO;
 	
 	@RequestMapping("/list")

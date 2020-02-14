@@ -1,8 +1,8 @@
-package br.com.etudo.dao;
+package br.com.estudo.dao;
 
 import java.util.List;
 
-import br.com.estudo.entities.Customer;
+import br.com.estudo.entity.Customer;
 
 public interface CustomerDAO {
 

@@ -1,4 +1,4 @@
-package br.com.etudo.dao;
+package br.com.estudo.dao;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.estudo.entities.Customer;
+import br.com.estudo.entity.Customer;
 
 @Repository
-public class CustomerDAOImpl implements CustomerDAO{
+public class CustomerDAOImpl implements CustomerDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -26,7 +26,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 
 		//Criar a query
 		Query<Customer> theQuery = 
-				theSession.createQuery("from customer",Customer.class);
+				theSession.createQuery("from Customer order by first_name",Customer.class);
 		
 		System.out.println("Recuperando customers....");
 		//recuperar os dados

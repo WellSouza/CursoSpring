@@ -1,9 +1,10 @@
-package br.com.estudo.entities;
+package br.com.estudo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -11,6 +12,7 @@ import javax.persistence.Table;
 @Table(name="customer")
 public class Customer {
 	
+	@Id
 	@Column(name="id")
 	@GeneratedValue(generator = "customer_id",strategy = GenerationType.SEQUENCE)
 	@SequenceGenerator(name = "customer_id",sequenceName = "seq_customer_id",allocationSize = 1)
@@ -36,6 +38,10 @@ public class Customer {
 
 	public String getLastName() {
 		return lastName;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public void setLastName(String lastName) {

@@ -20,7 +20,7 @@
 						<th>Last Name</th>
 						<th>Email</th>   
 					</tr>
-					<c:forEach var="temCustomer" items="${customers}">
+					<c:forEach var="tempCustomer" items="${customers}">
 						<tr>
 							<td>${tempCustomer.firstName}</td>
 							<td>${tempCustomer.lastName}</td>
