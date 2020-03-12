@@ -4,6 +4,8 @@
 <html>
 	<header>
 		<title>Lista de clientes</title>
+		<link type="text/css" rel="styleSheet" href="${pageContext.request.contextPath}/resources/css/style.css"/>
+		
 	</header>
 	<body>
 	 
