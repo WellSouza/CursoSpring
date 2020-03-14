@@ -6,5 +6,12 @@ import br.com.estudo.entity.Customer;
 
 public interface CustomerService {	
 	
-	public List<Customer> getCustomers();
+	public Customer getCustomer(int customerId);
+	
+	public boolean saveCustomer(Customer customer);
+
+	public boolean delCustomer(int customerId);
+
+	public List<Customer> getCustomers(String nameSearch);
+	
 }
